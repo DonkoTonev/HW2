@@ -29,7 +29,7 @@ void tail(const string& filename, int numLines) {
 
 int main() {
     string filename = "myfile.txt";
-    int numLines = 10; // брой на изважданите редове
+    int numLines = 1; // брой на изважданите редове
 
     tail(filename, numLines);
 

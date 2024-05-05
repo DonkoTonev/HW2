@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        cerr << "Използване: " << argv[0] << " <име_на_файл>\n";
+        cerr << "You are using: " << argv[0] << " <name of the file>\n";
         return 1;
     }
 
@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     ifstream file(filename);
 
     if (!file.is_open()) {
-        cerr << "Грешка при отварянето на файл " << filename << "\n";
+        cerr << "Error while opening the file " << filename << "\n";
         return 1;
     }
 
@@ -38,9 +38,9 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    cout << "Брой на редовете: " << lines << "\n";
-    cout << "Брой на думите: " << words << "\n";
-    cout << "Брой на символите: " << characters << "\n";
+    cout << "Count of the lines: " << lines << "\n";
+    cout << "Count of the words: " << words << "\n";
+    cout << "Count of the symbols: " << characters << "\n";
 
     file.close();
     return 0;
