@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        cerr << "You are using: " << argv[0] << " <name of the file>\n";
+        cerr << "Usage: " << argv[0] << " <filename>\n";
         return 1;
     }
 
@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     ifstream file(filename);
 
     if (!file.is_open()) {
-        cerr << "Error while opening the file " << filename << "\n";
+        cerr << "Error opening file " << filename << "\n";
         return 1;
     }
 
@@ -24,7 +24,6 @@ int main(int argc, char *argv[]) {
         lines++;
         characters += line.length();
 
-        // Преброяване на думите
         size_t pos = 0;
         bool in_word = false;
         while (pos < line.length()) {
@@ -38,9 +37,13 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    cout << "Count of the lines: " << lines << "\n";
-    cout << "Count of the words: " << words << "\n";
-    cout << "Count of the symbols: " << characters << "\n";
+    if (!line.empty()) {
+        lines++;
+    }
+
+    cout << "Number of lines: " << lines << "\n";
+    cout << "Number of words: " << words << "\n";
+    cout << "Number of characters: " << characters << "\n";
 
     file.close();
     return 0;

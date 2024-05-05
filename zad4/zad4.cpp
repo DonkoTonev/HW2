@@ -3,11 +3,10 @@
 #include <vector>
 using namespace std;
 
-// Функция за извеждане на последните N реда от файл
 void tail(const string& filename, int numLines) {
     ifstream file(filename);
     if (!file.is_open()) {
-        cerr << "Грешка при отварянето на файл: " << filename << endl;
+        cerr << "Error opening the file: " << filename << endl;
         return;
     }
 
@@ -29,7 +28,7 @@ void tail(const string& filename, int numLines) {
 
 int main() {
     string filename = "myfile.txt";
-    int numLines = 1; // брой на изважданите редове
+    int numLines = 1;
 
     tail(filename, numLines);
 
