@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "swap.h" // Include our header file
 
 int main(void)
 {
@@ -8,8 +8,8 @@ int main(void)
     std::cin >> num1;
     std::cout << "Enter second number: ";
     std::cin >> num2;
-    std::cout << "Before swap:  Num1 = “ >> num1 >> “, Num2 =  " << num2 << std::endl;
-    std::swap(num1, num2);
-    std::cout << "Before swap:  Num1 = “ >> num1 >> “, Num2 =  " << num2 << std::endl;
+    std::cout << "Before swap: Num1 = " << num1 << ", Num2 = " << num2 << std::endl;
+    swap(num1, num2);
+    std::cout << "After swap: Num1 = " << num1 << ", Num2 = " << num2 << std::endl;
     return 0;
 }
